@@ -14,6 +14,9 @@ export function App() {
     <div>
       <h2>{character.class}</h2>
       <h3>{character.alignment}</h3>
+      <h3>
+        {character.HP} / {character.HP} HP
+      </h3>
       <h4>Strength: {character.stats[0]}</h4>
       <h4>Strength: {character.stats[1]}</h4>
       <h4>Strength: {character.stats[2]}</h4>

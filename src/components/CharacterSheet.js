@@ -34,8 +34,8 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.magicSavesBonus = this.getBonus(this.stats[4], 0, 0);
 
   this.HP =
-    Math.floor(Math.random() * (this.characterClass.hitDie - 1) + 1) +
-    this.hpBonus;
-  this.meleeTHAC0 = this.characterClass.baseTHAC0 - this.meleeBonus;
-  this.rangedTHAC0 = this.characerClass.baseTHAC0 - this.rangedBonus;
+    Math.max(1, Math.floor(Math.random() * (charClass.hitDie - 1) + 1)) +
+    Math.max(0, this.hpBonus);
+  this.meleeTHAC0 = charClass.baseTHAC0 - this.meleeBonus;
+  this.rangedTHAC0 = charClass.baseTHAC0 - this.rangedBonus;
 }
