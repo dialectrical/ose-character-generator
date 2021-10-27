@@ -4,7 +4,7 @@ export const StatRoller = () => {
   const roll3D6 = (times) => {
     let result = 0;
     for (let i = 0; i < times; i++) {
-      result = Math.max(result, Math.floor(Math.random() * (18 - 3) + 3));
+      result = Math.max(result, Math.floor(Math.random() * (19 - 3) + 3));
     }
     return result;
   };
