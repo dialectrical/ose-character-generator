@@ -10,15 +10,15 @@ export function CharacterSheet(statArr, alignment, charClass) {
     let statBonus = 0;
     if (stat === 3) {
       statBonus = -3;
-    } else if (stat >= 5) {
+    } else if (stat <= 5) {
       statBonus = -2;
-    } else if (stat >= 8) {
+    } else if (stat <= 8) {
       statBonus = -1;
-    } else if (stat >= 12) {
+    } else if (stat <= 12) {
       this.statBonus = 0;
-    } else if (stat >= 15) {
+    } else if (stat <= 15) {
       statBonus = 1;
-    } else if (stat >= 17) {
+    } else if (stat <= 17) {
       statBonus = 2;
     } else {
       statBonus = 3;
