@@ -2,9 +2,11 @@ import { CharacterClasses } from "./components/CharacterClasses";
 import { CharacterSheet } from "./components/CharacterSheet";
 import { StatRoller } from "./components/StatRoller";
 import { ClassPicker } from "./components/ClassPicker";
+import { AlignmentRoller } from "./components/AlignmentRoller";
 
 export function App() {
   let stats = StatRoller();
+  let alignment = alignmentRoller();
   let characterClass = ClassPicker(stats, CharacterClasses);
   let character = new CharacterSheet(stats, "Neutral", characterClass);
 
@@ -18,11 +20,11 @@ export function App() {
         {character.HP} / {character.HP} HP
       </h3>
       <h4>Strength: {character.stats[0]}</h4>
-      <h4>Strength: {character.stats[1]}</h4>
-      <h4>Strength: {character.stats[2]}</h4>
-      <h4>Strength: {character.stats[3]}</h4>
-      <h4>Strength: {character.stats[4]}</h4>
-      <h4>Strength: {character.stats[5]}</h4>
+      <h4>Dexterity: {character.stats[1]}</h4>
+      <h4>Constitution: {character.stats[2]}</h4>
+      <h4>Intelligence: {character.stats[3]}</h4>
+      <h4>Wisdom: {character.stats[4]}</h4>
+      <h4>Charisma: {character.stats[5]}</h4>
     </div>
   );
 }
