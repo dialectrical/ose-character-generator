@@ -10,7 +10,18 @@ export function App() {
 
   console.log(character);
 
-  return <div>hello world</div>;
+  return (
+    <div>
+      <h2>{character.class}</h2>
+      <h3>{character.alignment}</h3>
+      <h4>Strength: {character.stats[0]}</h4>
+      <h4>Strength: {character.stats[1]}</h4>
+      <h4>Strength: {character.stats[2]}</h4>
+      <h4>Strength: {character.stats[3]}</h4>
+      <h4>Strength: {character.stats[4]}</h4>
+      <h4>Strength: {character.stats[5]}</h4>
+    </div>
+  );
 }
 
 console.log(App());

@@ -4,6 +4,7 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.stats = statArr;
   this.alignment = alignment;
   this.class = charClass.name;
+  this.savingThrows = charClass.savingThrows;
 
   this.getBonus = function (stat, bonusMod) {
     let statBonus = 0;
@@ -31,4 +32,10 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.rangedBonus = this.getBonus(this.stats[1], 0, 0);
   this.hpBonus = this.getBonus(this.stats[2], 0, 0);
   this.magicSavesBonus = this.getBonus(this.stats[4], 0, 0);
+
+  this.HP =
+    Math.floor(Math.random() * (this.characterClass.hitDie - 1) + 1) +
+    this.hpBonus;
+  this.meleeTHAC0 = this.characterClass.baseTHAC0 - this.meleeBonus;
+  this.rangedTHAC0 = this.characerClass.baseTHAC0 - this.rangedBonus;
 }
