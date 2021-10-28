@@ -27,6 +27,10 @@ export function App() {
         {character.savingThrows[4]}
       </div>
       <h4>Strength: {character.stats[0]}</h4>
+      <div>
+        <button onClick={() => character.increaseStat(0)}>+</button>{" "}
+        <button onClick={() => character.reduceStat(0)}>-</button>
+      </div>
       <div>Melee Bonus: {character.meleeBonus}</div>{" "}
       <div>{character.openDoors} in 6 chance to open doors</div>
       <h4>Dexterity: {character.stats[1]}</h4>

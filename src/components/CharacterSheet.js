@@ -8,17 +8,18 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.pointBuy = 0;
 
   this.reduceStat = (stat) => {
-    if (stat >= 11) {
+    if (this.stats[stat] >= 11) {
       this.pointBuy++;
-      return (stat -= 2);
+      return (this.stats[stat] -= 2);
     }
     return undefined;
   };
 
   this.increaseStat = (stat) => {
     if (this.pointBuy) {
+      console.log("increased!");
       this.pointBuy--;
-      return stat++;
+      return this.stat[stat]++;
     }
     return undefined;
   };
