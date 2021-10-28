@@ -8,11 +8,19 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.pointBuy = 0;
 
   this.reduceStat = (stat) => {
-    //reduces a stat 2 points to gain 1 point buy
+    if (stat >= 11) {
+      pointBuy++;
+      return (stat -= 2);
+    }
+    return undefined;
   };
 
   this.increaseStat = (stat) => {
-    //increases a stat by 1 point buy
+    if (pointBuy) {
+      pointBuy--;
+      return stat++;
+    }
+    return undefined;
   };
 
   this.getBonus = function (stat, bonusMod) {
@@ -50,7 +58,6 @@ export function CharacterSheet(statArr, alignment, charClass) {
         }
       }
     }
-
     return workingBonus;
   };
 
