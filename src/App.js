@@ -1,15 +1,8 @@
-import { CharacterClasses } from "./components/CharacterClasses";
-import { CharacterSheet } from "./components/CharacterSheet";
-import { StatRoller } from "./components/StatRoller";
-import { ClassPicker } from "./components/ClassPicker";
-import { AlignmentRoller } from "./components/AlignmentRoller";
+import React, { useState } from "react";
+import { Generator } from "./components/Generator";
 
-export function App() {
-  let stats = StatRoller();
-  let characterClass = ClassPicker(stats, CharacterClasses);
-  let character = new CharacterSheet(stats, AlignmentRoller(), characterClass);
-
-  console.log(character);
+export const App = () => {
+  const [character, setCharacter] = useState(Generator());
 
   return (
     <div>
@@ -42,8 +35,9 @@ export function App() {
       <h4>Wisdom: {character.stats[4]}</h4>
       <div>Save against Magic Bonus: {character.magicSavesBonus}</div>
       <h4>Charisma: {character.stats[5]}</h4>
+      <div>
+        <button onClick={() => setCharacter(Generator())}>Generate</button>
+      </div>
     </div>
   );
-}
-
-console.log(App());
+};
