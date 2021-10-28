@@ -2,6 +2,7 @@ export const CharacterClasses = [
   {
     name: "Cleric",
     requirements: [0, 0, 0, 0, 0, 0],
+    requisite: [0, 0, 0, 0, 1, 0],
     hitDie: 6,
     armor: "Any, including shields",
     Weapons: "Any blunt weapons",
@@ -13,6 +14,7 @@ export const CharacterClasses = [
   {
     name: "Dwarf",
     requirements: [0, 0, 9, 0, 0, 0],
+    requisite: [1, 0, 0, 0, 0, 0],
     hitDie: 8,
     armor: "Any, including shields",
     Weapons: "Small or normal sized",
@@ -24,6 +26,7 @@ export const CharacterClasses = [
   {
     name: "Elf",
     requirements: [0, 0, 0, 9, 0, 0],
+    requisite: [1, 0, 0, 1, 0, 0],
     hitDie: 6,
     armor: "Any, including shields",
     Weapons: "Any",
@@ -35,6 +38,7 @@ export const CharacterClasses = [
   {
     name: "Fighter",
     requirements: [0, 0, 0, 0, 0, 0],
+    requisite: [1, 0, 0, 0, 0, 0],
     hitDie: 8,
     armor: "Any, including shields",
     Weapons: "Any",
@@ -46,6 +50,7 @@ export const CharacterClasses = [
   {
     name: "Halfling",
     requirements: [0, 9, 9, 0, 0, 0],
+    requisite: [1, 0, 0, 0, 0, 0],
     hitDie: 6,
     armor: "Any, appropraite to size, including shields",
     Weapons: "Any appropriate to size",
@@ -57,6 +62,7 @@ export const CharacterClasses = [
   {
     name: "Magic-User",
     requirements: false,
+    requisite: [0, 0, 0, 1, 0, 0],
     hitDie: 4,
     armor: "None",
     Weapons: "Dagger",
@@ -68,6 +74,7 @@ export const CharacterClasses = [
   {
     name: "Thief",
     requirements: [0, 0, 0, 0, 0, 0],
+    requisite: [0, 1, 0, 0, 0, 0],
     hitDie: 4,
     armor: "Leather, no shields",
     Weapons: "Any",
