@@ -9,15 +9,15 @@ export function CharacterSheet(statArr, alignment, charClass) {
 
   this.reduceStat = (stat) => {
     if (stat >= 11) {
-      pointBuy++;
+      this.pointBuy++;
       return (stat -= 2);
     }
     return undefined;
   };
 
   this.increaseStat = (stat) => {
-    if (pointBuy) {
-      pointBuy--;
+    if (this.pointBuy) {
+      this.pointBuy--;
       return stat++;
     }
     return undefined;
@@ -52,9 +52,9 @@ export function CharacterSheet(statArr, alignment, charClass) {
         } else if (statArr[i] <= 8) {
           workingBonus -= 10;
         } else if (12 < statArr[i] && statArr[i] <= 15) {
-          workingbonus += 5;
+          workingBonus += 5;
         } else {
-          workingbonus += 10;
+          workingBonus += 10;
         }
       }
     }

@@ -18,6 +18,7 @@ export function App() {
       <h3>
         {character.HP} / {character.HP} HP
       </h3>
+      <h3>{character.xpBonus}% bonus experience</h3>
       <div>Saving Throws</div>
       <div>
         {" "}
