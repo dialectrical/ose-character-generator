@@ -5,6 +5,15 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.alignment = alignment;
   this.class = charClass.name;
   this.savingThrows = charClass.savingThrows;
+  this.pointBuy = 0;
+
+  this.reduceStat = (stat) => {
+    //reduces a stat 2 points to gain 1 point buy
+  };
+
+  this.increaseStat = (stat) => {
+    //increases a stat by 1 point buy
+  };
 
   this.getBonus = function (stat, bonusMod) {
     let statBonus = 0;
@@ -24,6 +33,10 @@ export function CharacterSheet(statArr, alignment, charClass) {
       statBonus = 3;
     }
     return statBonus + bonusMod;
+  };
+
+  this.getXPBonus = () => {
+    //calculate XP bonus based on class prime requisite
   };
 
   this.meleeBonus = this.getBonus(this.stats[0], 0, 0);

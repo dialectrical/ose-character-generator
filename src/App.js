@@ -35,7 +35,7 @@ export function App() {
       <div>HP Bonus: {character.hpBonus}</div>
       <h4>Intelligence: {character.stats[3]}</h4>
       <h4>Wisdom: {character.stats[4]}</h4>
-      <div>Save against Magic Bonus: {character.magicSavesBonuis}</div>
+      <div>Save against Magic Bonus: {character.magicSavesBonus}</div>
       <h4>Charisma: {character.stats[5]}</h4>
     </div>
   );
