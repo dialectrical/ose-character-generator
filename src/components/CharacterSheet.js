@@ -36,7 +36,22 @@ export function CharacterSheet(statArr, alignment, charClass) {
   };
 
   this.getXPBonus = () => {
-    //calculate XP bonus based on class prime requisite
+    let workingBonus = 0;
+    for (let i = 0; i < statArr.length; i++) {
+      if (charClass.requisite[i] === 1) {
+        if (statArr[i] <= 5) {
+          workingBonus -= 20;
+        } else if (statArr[i] <= 8) {
+          workingBonus -= 10;
+        } else if (12 < statArr[i] && statArr[i] <= 15) {
+          workingbonus += 5;
+        } else {
+          workingbonus += 10;
+        }
+      }
+    }
+
+    return workingBonus;
   };
 
   this.meleeBonus = this.getBonus(this.stats[0], 0, 0);
@@ -45,10 +60,10 @@ export function CharacterSheet(statArr, alignment, charClass) {
   this.rangedBonus = this.getBonus(this.stats[1], 0, 0);
   this.hpBonus = this.getBonus(this.stats[2], 0, 0);
   this.magicSavesBonus = this.getBonus(this.stats[4], 0, 0);
-
   this.HP =
     Math.max(1, Math.floor(Math.random() * (charClass.hitDie - 1) + 1)) +
     Math.max(0, this.hpBonus);
   this.meleeTHAC0 = charClass.baseTHAC0 - this.meleeBonus;
   this.rangedTHAC0 = charClass.baseTHAC0 - this.rangedBonus;
+  this.xpBonus = this.getXPBonus();
 }
