@@ -50,7 +50,7 @@ export const CharacterClasses = [
   {
     name: "Halfling",
     requirements: [0, 9, 9, 0, 0, 0],
-    requisite: [1, 0, 0, 0, 0, 0],
+    requisite: [1, 1, 0, 0, 0, 0],
     hitDie: 6,
     armor: "Any, appropraite to size, including shields",
     Weapons: "Any appropriate to size",

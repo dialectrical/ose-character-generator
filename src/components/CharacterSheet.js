@@ -3,7 +3,7 @@
 export function CharacterSheet(statArr, alignment, charClass) {
   this.stats = statArr;
   this.alignment = alignment;
-  this.class = charClass.name;
+  this.class = charClass;
   this.savingThrows = charClass.savingThrows;
   this.pointBuy = 0;
 

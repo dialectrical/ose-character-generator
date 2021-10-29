@@ -8,7 +8,7 @@ export const App = () => {
 
   return (
     <div>
-      <h2>{character.class}</h2>
+      <h2>{character.class.name}</h2>
       <h3>{character.alignment}</h3>
       <h3>
         {character.HP} / {character.HP} HP
