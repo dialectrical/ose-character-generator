@@ -5,9 +5,12 @@ import { StatDisplay } from "./components/StatDisplay";
 export const App = () => {
   const [character, setCharacter] = useState(Generator());
   const [pointBuy, setPointBuy] = useState(0);
+  const [storage, setStorage] = useState();
 
   return (
     <div>
+      <button onClick={() => setCharacter(storage)}>old character</button>
+
       <h2>{character.class.name}</h2>
       <h3>{character.alignment}</h3>
       <h3>
@@ -21,9 +24,11 @@ export const App = () => {
         {character.savingThrows[2]} B {character.savingThrows[3]} S{" "}
         {character.savingThrows[4]}
       </div>
+      <div>{pointBuy}</div>
       {StatDisplay(character, setPointBuy)}
       <div>
         <button onClick={() => setCharacter(Generator())}>Generate</button>
+        <button onclick={() => setStorage(character)}>Save</button>
       </div>
     </div>
   );
