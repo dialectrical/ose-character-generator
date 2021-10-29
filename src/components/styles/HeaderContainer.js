@@ -1,9 +1,9 @@
-import styles from "styled-components";
+import styled from "styled-components";
 
 export const HeaderContainer = styled.div`
   background-color: #dbe8d4;
   height: 191px;
   width: 100%;
-  border: none;
-  border-radius: 8;
+  margin: 0px 0px 21px 0px;
+  overflow: auto;
 `;

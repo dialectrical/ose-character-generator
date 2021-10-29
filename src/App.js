@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Generator } from "./components/Generator";
 import { StatDisplay } from "./components/StatDisplay";
-import { HeaderConainer } from "./components/styles/HeaderContainer";
+import { HeaderContainer } from "./components/styles/HeaderContainer";
+import {
+  HeaderObject,
+  HeaderObjectSmall,
+} from "./components/styles/HeaderObject";
 
 export const App = () => {
   const [character, setCharacter] = useState(Generator());
@@ -10,14 +14,13 @@ export const App = () => {
 
   return (
     <div>
-      <button onClick={() => setCharacter(storage)}>old character</button>
-
-      <h2>{character.class.name}</h2>
-      <h3>{character.alignment}</h3>
-      <h3>
-        {character.HP} / {character.HP} HP
-      </h3>
-      <h3>{character.xpBonus}% bonus experience</h3>
+      <HeaderContainer>
+        <HeaderObject>{character.class.name}</HeaderObject>
+        <HeaderObjectSmall>
+          {character.HP} / {character.HP} HP
+        </HeaderObjectSmall>
+        <HeaderObjectSmall>{character.alignment}</HeaderObjectSmall>
+      </HeaderContainer>
       <div>Saving Throws</div>
       <div>
         {" "}
