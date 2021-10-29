@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Generator } from "./components/Generator";
 import { StatDisplay } from "./components/StatDisplay";
+import { HeaderConainer } from "./components/styles/HeaderContainer";
 
 export const App = () => {
   const [character, setCharacter] = useState(Generator());
