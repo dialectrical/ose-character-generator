@@ -21,16 +21,7 @@ export const App = () => {
         {character.savingThrows[2]} B {character.savingThrows[3]} S{" "}
         {character.savingThrows[4]}
       </div>
-      <div>{StatDisplay(character, setPointBuy)}</div>
-      <h4>Dexterity: {character.stats[1]}</h4>
-      <div>Ranged Bonus: {character.rangedBonus}</div>
-      <div>AC bonus: {character.acBonus}</div>
-      <h4>Constitution: {character.stats[2]}</h4>
-      <div>HP Bonus: {character.hpBonus}</div>
-      <h4>Intelligence: {character.stats[3]}</h4>
-      <h4>Wisdom: {character.stats[4]}</h4>
-      <div>Save against Magic Bonus: {character.magicSavesBonus}</div>
-      <h4>Charisma: {character.stats[5]}</h4>
+      {StatDisplay(character, setPointBuy)}
       <div>
         <button onClick={() => setCharacter(Generator())}>Generate</button>
       </div>
