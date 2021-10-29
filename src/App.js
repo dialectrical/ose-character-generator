@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Generator } from "./components/Generator";
+import { StatDisplay } from "./components/StatDisplay";
 
 export const App = () => {
   const [character, setCharacter] = useState(Generator());
+  const [pointBuy, setPointBuy] = useState(0);
 
   return (
     <div>
@@ -19,13 +21,7 @@ export const App = () => {
         {character.savingThrows[2]} B {character.savingThrows[3]} S{" "}
         {character.savingThrows[4]}
       </div>
-      <h4>Strength: {character.stats[0]}</h4>
-      <div>
-        <button onClick={() => character.increaseStat(0)}>+</button>{" "}
-        <button onClick={() => character.reduceStat(0)}>-</button>
-      </div>
-      <div>Melee Bonus: {character.meleeBonus}</div>{" "}
-      <div>{character.openDoors} in 6 chance to open doors</div>
+      <div>{StatDisplay(character, setPointBuy)}</div>
       <h4>Dexterity: {character.stats[1]}</h4>
       <div>Ranged Bonus: {character.rangedBonus}</div>
       <div>AC bonus: {character.acBonus}</div>
