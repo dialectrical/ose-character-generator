@@ -3,6 +3,7 @@ import {
   AbilityScoreContainer,
   StatContainer,
 } from "./styles/AbilityScoreContainer";
+import { AbilityScoreObject } from "./styles/AbilityScoreObject";
 
 export const StatDisplay = (character, hook) => {
   const pointBuy = (input) => {
@@ -18,24 +19,26 @@ export const StatDisplay = (character, hook) => {
     <AbilityScoreContainer>
       <h3>Ability Scores</h3>
       <StatContainer>
-        <div>
-          Strength <br /> {character.stats[0]}
-        </div>
-        <div>
+        <AbilityScoreObject>
+          <div>
+            <h3>Strength</h3> <h3>{character.stats[0]}</h3>
+          </div>
+        </AbilityScoreObject>
+        <AbilityScoreObject>
           Dexterity <br /> {character.stats[1]}
-        </div>
-        <div>
+        </AbilityScoreObject>
+        <AbilityScoreObject>
           Constitution <br /> {character.stats[2]}
-        </div>
-        <div>
+        </AbilityScoreObject>
+        <AbilityScoreObject>
           Intelligence <br /> {character.stats[3]}
-        </div>
-        <div>
+        </AbilityScoreObject>
+        <AbilityScoreObject>
           Wisdom <br /> {character.stats[4]}
-        </div>
-        <div>
+        </AbilityScoreObject>
+        <AbilityScoreObject>
           Charisma <br /> {character.stats[5]}
-        </div>
+        </AbilityScoreObject>
       </StatContainer>
     </AbilityScoreContainer>
   );

@@ -12,15 +12,8 @@ export const AbilityScoreContainer = styled.div`
 `;
 
 export const StatContainer = styled.div`
-  marign: 12px 13px 12px 13px;
   display: flex;
   flex-direction: row;
-  div {
-    flex-basis: 33%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    marign: 9px 9px 9px 9px;
-    height: 110px;
-    width: 110px;
-  }
+  flex-wrap: wrap;
+  justify-content: space-between;
 `;
