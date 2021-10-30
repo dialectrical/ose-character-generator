@@ -12,4 +12,9 @@ export const StyledButton = styled.button`
     border-radius: 100px;
     border: none;
     padding: 16px 32px 16px 32px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    :hover {
+        cursor: pointer;
+    }
 `
