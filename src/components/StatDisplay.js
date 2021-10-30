@@ -1,9 +1,13 @@
 import React from "react";
 import {
   AbilityScoreContainer,
+  AbilityScoreContainerSmall,
   StatContainer,
 } from "./styles/AbilityScoreContainer";
-import { AbilityScoreObject } from "./styles/AbilityScoreObject";
+import {
+  AbilityScoreObject,
+  AbilityScoreObjectSmall,
+} from "./styles/AbilityScoreObject";
 
 export const StatDisplay = (character, hook) => {
   const pointBuy = (input) => {
@@ -57,5 +61,45 @@ export const StatDisplay = (character, hook) => {
         </AbilityScoreObject>
       </StatContainer>
     </AbilityScoreContainer>
+  );
+};
+
+export const DerivedStatDisplay = (character) => {
+  return (
+    <AbilityScoreContainerSmall>
+      <h3>Saving Throws</h3>
+      <StatContainer>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Death</h3>
+            <h3>{character.savingThrows[0]}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Wands</h3>
+            <h3>{character.savingThrows[1]}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Petrify</h3>
+            <h3>{character.savingThrows[2]}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Breath</h3>
+            <h3>{character.savingThrows[3]}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Spells</h3>
+            <h3>{character.savingThrows[4]}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+      </StatContainer>
+    </AbilityScoreContainerSmall>
   );
 };

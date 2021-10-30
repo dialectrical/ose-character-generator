@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Generator } from "./components/Generator";
-import { StatDisplay } from "./components/StatDisplay";
+import { StatDisplay, DerivedStatDisplay } from "./components/StatDisplay";
 import { HeaderContainer } from "./components/styles/HeaderContainer";
 import {
   HeaderObject,
@@ -21,15 +21,8 @@ export const App = () => {
         </HeaderObjectSmall>
         <HeaderObjectSmall>{character.alignment}</HeaderObjectSmall>
       </HeaderContainer>
-      <div>Saving Throws</div>
-      <div>
-        {" "}
-        D {character.savingThrows[0]} W {character.savingThrows[1]} P{" "}
-        {character.savingThrows[2]} B {character.savingThrows[3]} S{" "}
-        {character.savingThrows[4]}
-      </div>
-      <div>{pointBuy}</div>
       {StatDisplay(character, setPointBuy)}
+      {DerivedStatDisplay(character)}
       <div>
         <button onClick={() => setCharacter(Generator())}>Generate</button>
         <button onclick={() => setStorage(character)}>Save</button>

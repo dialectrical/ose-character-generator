@@ -12,7 +12,7 @@ export const AbilityScoreContainer = styled.div`
 `;
 
 export const AbilityScoreContainerSmall = styled.div`
-  margin: 9px 95px 9px 25px;
+  margin: 9px 25px 9px 25px;
   h3 {
     text-align: center;
     font-weight: 700;

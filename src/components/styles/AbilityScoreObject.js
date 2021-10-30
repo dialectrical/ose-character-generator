@@ -22,4 +22,11 @@ export const AbilityScoreObjectSmall = styled.div`
   color: #ffffff;
   border-radius: 8px;
   margin-bottom: 6px;
+  div {
+    margin-top: 10%;
+  }
+  h3 {
+    margin: 0px;
+    font-size: 14px;
+  }
 `;
