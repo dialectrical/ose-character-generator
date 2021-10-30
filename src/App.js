@@ -31,6 +31,8 @@ export const App = () => {
       {CombatStatDisplay(character)}
       <div>
         <StyledButton onClick={() => setCharacter(Generator())}>Generate</StyledButton>
+        <StyledButton onClick={() => setStorage(character)}>Save</StyledButton>
+        <StyledButton onClick={() => setCharacter(storage)}>Recover</StyledButton>
       </div>
     </div>
   );
