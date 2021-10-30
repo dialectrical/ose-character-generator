@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { Generator } from "./components/Generator";
-import { StatDisplay, DerivedStatDisplay } from "./components/StatDisplay";
+import {
+  StatDisplay,
+  SavingThrowDisplay,
+  CombatStatDisplay,
+} from "./components/StatDisplay";
 import { HeaderContainer } from "./components/styles/HeaderContainer";
 import {
   HeaderObject,
@@ -22,7 +26,8 @@ export const App = () => {
         <HeaderObjectSmall>{character.alignment}</HeaderObjectSmall>
       </HeaderContainer>
       {StatDisplay(character, setPointBuy)}
-      {DerivedStatDisplay(character)}
+      {SavingThrowDisplay(character)}
+      {CombatStatDisplay(character)}
       <div>
         <button onClick={() => setCharacter(Generator())}>Generate</button>
         <button onclick={() => setStorage(character)}>Save</button>

@@ -64,7 +64,7 @@ export const StatDisplay = (character, hook) => {
   );
 };
 
-export const DerivedStatDisplay = (character) => {
+export const SavingThrowDisplay = (character) => {
   return (
     <AbilityScoreContainerSmall>
       <h3>Saving Throws</h3>
@@ -97,6 +97,34 @@ export const DerivedStatDisplay = (character) => {
           <div>
             <h3>Spells</h3>
             <h3>{character.savingThrows[4]}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+      </StatContainer>
+    </AbilityScoreContainerSmall>
+  );
+};
+
+export const CombatStatDisplay = (character) => {
+  return (
+    <AbilityScoreContainerSmall>
+      <h3>Combat</h3>
+      <StatContainer>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Melee</h3>
+            <h3>{character.meleeTHAC0}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>Ranged</h3>
+            <h3>{character.rangedTHAC0}</h3>
+          </div>
+        </AbilityScoreObjectSmall>
+        <AbilityScoreObjectSmall>
+          <div>
+            <h3>AC</h3>
+            <h3>{10 - character.acBonus}</h3>
           </div>
         </AbilityScoreObjectSmall>
       </StatContainer>
