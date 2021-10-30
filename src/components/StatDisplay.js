@@ -21,7 +21,7 @@ export const StatDisplay = (character, hook) => {
 
   return (
     <AbilityScoreContainer>
-      <h3>Ability Scores</h3>
+      <h2>Ability Scores</h2>
       <StatContainer>
         <AbilityScoreObject>
           <div>
@@ -67,7 +67,7 @@ export const StatDisplay = (character, hook) => {
 export const SavingThrowDisplay = (character) => {
   return (
     <AbilityScoreContainerSmall>
-      <h3>Saving Throws</h3>
+      <h2>Saving Throws</h2>
       <StatContainer>
         <AbilityScoreObjectSmall>
           <div>
