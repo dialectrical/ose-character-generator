@@ -11,6 +11,16 @@ export const AbilityScoreContainer = styled.div`
   }
 `;
 
+export const AbilityScoreContainerSmall = styled.div`
+  margin: 9px 95px 9px 25px;
+  h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 12px;
+  }
+`;
 export const StatContainer = styled.div`
   display: flex;
   flex-direction: row;

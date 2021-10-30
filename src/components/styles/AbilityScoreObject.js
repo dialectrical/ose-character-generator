@@ -7,9 +7,19 @@ export const AbilityScoreObject = styled.div`
   margin-bottom: 9px;
   border-radius: 8px;
   div {
-    margin-top: 35%;
+    margin-top: 33%;
   }
   h3 {
     margin: 0px;
+    font-size: 20px;
   }
+`;
+
+export const AbilityScoreObjectSmall = styled.div`
+  height: 50px;
+  width: 50px;
+  background-color: #000000;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 6px;
 `;
