@@ -10,6 +10,7 @@ import {
   HeaderObject,
   HeaderObjectSmall,
 } from "./components/styles/HeaderObject";
+import { StyledButton } from "./components/styles/StyledButton";
 
 export const App = () => {
   const [character, setCharacter] = useState(Generator());
@@ -30,10 +31,19 @@ export const App = () => {
       {CombatStatDisplay(character)}
       {/*{" "}
       <div>
+<<<<<<< HEAD
         <button onClick={() => setCharacter(Generator())}>Generate</button>
         <button onclick={() => setStorage(character)}>Save</button>
       </div>{" "}
       */}
+=======
+        <StyledButton onClick={() => setCharacter(Generator())}>Generate</StyledButton>
+        <StyledButton onClick={() => setStorage(character)}>Save</StyledButton>
+        <StyledButton onClick={() => setCharacter(storage)}>Recover</StyledButton>
+      </div>
+>>>>>>> 069624c0d457593ee25903d0fcdbff74738f3a7a
     </div>
   );
 };
+
+export default App;

@@ -5,7 +5,7 @@ export const AbilityScoreContainer = styled.div`
   h3 {
     text-align: center;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 19px;
     margin-bottom: 12px;
   }
@@ -16,7 +16,7 @@ export const AbilityScoreContainerSmall = styled.div`
   h3 {
     text-align: center;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 19px;
     margin-bottom: 12px;
   }

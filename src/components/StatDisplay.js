@@ -6,7 +6,8 @@ import {
 } from "./styles/AbilityScoreContainer";
 import {
   AbilityScoreObject,
-  AbilityScoreObjectSmall,
+  AbilityScoreObjectMedium,
+  AbilityScoreObjectSmall
 } from "./styles/AbilityScoreObject";
 
 export const StatDisplay = (character, hook) => {
@@ -21,7 +22,7 @@ export const StatDisplay = (character, hook) => {
 
   return (
     <AbilityScoreContainer>
-      <h3>Ability Scores</h3>
+      <h2>Ability Scores</h2>
       <StatContainer>
         <AbilityScoreObject>
           <div>
@@ -67,7 +68,7 @@ export const StatDisplay = (character, hook) => {
 export const SavingThrowDisplay = (character) => {
   return (
     <AbilityScoreContainerSmall>
-      <h3>Saving Throws</h3>
+      <h2>Saving Throws</h2>
       <StatContainer>
         <AbilityScoreObjectSmall>
           <div>
@@ -109,24 +110,24 @@ export const CombatStatDisplay = (character) => {
     <AbilityScoreContainerSmall>
       <h3>Combat</h3>
       <StatContainer>
-        <AbilityScoreObjectSmall>
+        <AbilityScoreObjectMedium>
           <div>
-            <h3>Melee</h3>
+            <h3>Melee THAC0</h3>
             <h3>{character.meleeTHAC0}</h3>
           </div>
-        </AbilityScoreObjectSmall>
-        <AbilityScoreObjectSmall>
+        </AbilityScoreObjectMedium>
+        <AbilityScoreObjectMedium>
           <div>
-            <h3>Ranged</h3>
+            <h3>Ranged THAC0</h3>
             <h3>{character.rangedTHAC0}</h3>
           </div>
-        </AbilityScoreObjectSmall>
-        <AbilityScoreObjectSmall>
+        </AbilityScoreObjectMedium>
+        <AbilityScoreObjectMedium>
           <div>
             <h3>AC</h3>
             <h3>{10 - character.acBonus}</h3>
           </div>
-        </AbilityScoreObjectSmall>
+        </AbilityScoreObjectMedium>
       </StatContainer>
     </AbilityScoreContainerSmall>
   );
