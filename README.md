@@ -4,6 +4,10 @@ This webapp is a character generator for d20-based fantasy adventure and rolepla
 
 You can find the demo [here](). **Note**: the project currently only supports a mobile layout, so consider opening the generator on your phone for the best experience.
 
+## Screenshot!
+
+![alt](./assets/mobileScreenshot.jpeg)
+
 ## Using the Character Generator
 
 When you open the generator, a character will be randomly created for you. If you'd like to generate another character, scroll down and click "Generate." Repeat as many times as necessary!
