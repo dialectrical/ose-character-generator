@@ -28,10 +28,12 @@ export const App = () => {
       {StatDisplay(character, setPointBuy)}
       {SavingThrowDisplay(character)}
       {CombatStatDisplay(character)}
+      {/*{" "}
       <div>
         <button onClick={() => setCharacter(Generator())}>Generate</button>
         <button onclick={() => setStorage(character)}>Save</button>
-      </div>
+      </div>{" "}
+      */}
     </div>
   );
 };
