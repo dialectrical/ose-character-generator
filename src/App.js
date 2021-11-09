@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Generator } from "./components/Generator";
+import { AppContainer } from "./components/styles/AppContainer";
 import {
   StatDisplay,
   SavingThrowDisplay,
@@ -18,7 +19,7 @@ export const App = () => {
   const [storage, setStorage] = useState();
 
   return (
-    <div>
+    <AppContainer>
       <HeaderContainer>
         <HeaderObject>{character.class.name}</HeaderObject>
         <HeaderObjectSmall>
@@ -28,21 +29,13 @@ export const App = () => {
       </HeaderContainer>
       {StatDisplay(character, setPointBuy)}
       {SavingThrowDisplay(character)}
-      {CombatStatDisplay(character)}
-      {/*{" "}
+      {CombatStatDisplay(character)}{" "}
       <div>
-<<<<<<< HEAD
-        <button onClick={() => setCharacter(Generator())}>Generate</button>
-        <button onclick={() => setStorage(character)}>Save</button>
-      </div>{" "}
-      */}
-=======
-        <StyledButton onClick={() => setCharacter(Generator())}>Generate</StyledButton>
-        <StyledButton onClick={() => setStorage(character)}>Save</StyledButton>
-        <StyledButton onClick={() => setCharacter(storage)}>Recover</StyledButton>
+        <StyledButton onClick={() => setCharacter(Generator())}>
+          Generate
+        </StyledButton>
       </div>
->>>>>>> 069624c0d457593ee25903d0fcdbff74738f3a7a
-    </div>
+    </AppContainer>
   );
 };
 
